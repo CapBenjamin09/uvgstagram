@@ -33,6 +33,19 @@
                     </p>
                 </div>
 
+                @auth
+                    @if($post->user_id === auth()->user()->id)
+                        <form action="{{ route('post.destroy', $post) }}" method="post">
+                            @method('DELETE') @csrf
+
+                            <input type="submit" value="Eliminar Publicación" class="bg-red-500 hover:bg-red-600 p-2 rounded text-white font-bold">
+
+                        </form>
+
+                    @endif
+                @endauth
+
+
                 {{--                cajita de comentarios--}}
                 <div class="flex-none sm:h-96 md:h-32 xl:h-96 lg:h-64 2xl:h-128">
                     <div class="flex mb-5">
@@ -93,14 +106,8 @@
                         @error('comment')
                         <p class=" text-red-700 my-2 rounded-lg text-sm p-2 text-center">{{ $message }}</p>
                         @enderror
-
-
-
                     </div>
                 </form>
-
-
-
             </div>
 
         </div>

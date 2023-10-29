@@ -15,6 +15,7 @@ class Post extends Model
         'description',
         'image',
         'user_id',
+
     ];
 
     //Relacion de muchos a uno

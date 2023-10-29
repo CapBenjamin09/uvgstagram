@@ -29,7 +29,7 @@
                 @csrf
                 <div class="mb-5">
                     <label for="title" class="mb-2 block uppercase text-gray-500 font-bold">
-                        Email
+                        Titulo
                     </label>
                     <input type="text" id="title" name="title" placeholder="Titulo de Publicación"
                            class="border p-3 w-full rounded-lg @error('email')  border-red-500 @enderror " value="{{ old('email') }}">
@@ -40,7 +40,7 @@
 
                 <div class="mb-5">
                     <label for="description" class="mb-2 block uppercase text-gray-500 font-bold">
-                        Password
+                        Descripción
                     </label>
                     <textarea
                         id="description"
