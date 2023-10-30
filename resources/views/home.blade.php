@@ -17,9 +17,11 @@
                 <a href="{{ route('post.index', $post->user->username) }}">
                     <img class="cursor-pointer" width="40" height="40" src="{{ asset('storage/usuario.svg') }}" alt="Imagen Usuario">
                 </a>
-                <div class="pl-2 font-bold text-xl mb-2 pt-2">{{ $post->user->username }}</a></div>
+                <div class="pl-2 font-bold text-xl mb-2 pt-2"><a href="{{ route('post.index', $post->user->username) }}">{{ $post->user->username }}</a></div>
             </div>
-            <img class="w-full" src="{{asset('uploads/'. $post->image)}}" alt="Sunset in the mountains">
+            <a href="{{route('post.show', [ $post->user->username, $post])}}">
+                <img class="w-full" src="{{asset('uploads/'. $post->image)}}" alt="Sunset in the mountains">
+            </a>
             <div class="flex-none px-4 py-4 ">
                 <div class="flex flex-nowrap">
                     <p class="py-0.5">0</p>

@@ -45,7 +45,6 @@
                     @endif
                 @endauth
 
-
                 {{--                cajita de comentarios--}}
                 <div class="flex-none sm:h-96 md:h-32 xl:h-96 lg:h-64 2xl:h-128">
                     <div class="flex mb-5">
